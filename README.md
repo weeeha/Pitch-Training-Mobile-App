@@ -1,5 +1,13 @@
 # Pitch Training Mobile App
 
+**Problem.** Interview prep that stops at reading and listening never checks whether the spoken answer hits its points in order, lands the closing line, fits the time and avoids the phrases marked for avoidance.
+
+**Idea.** The app plays a recruiter question, records the spoken answer and transcribes it on the device. Feedback comes in two layers: delivery numbers computed on the phone, and a content grade from one Claude call.
+
+**Built.** Spec only so far: a design spec and two implementation plans (an iOS risk spike, and a deck exporter plus grader service), with no app code. The planned stack is SwiftUI on iOS 26 and later, with a TypeScript grader on Vercel. 5 commits on 3 days, Sep 26 to Oct 12, 2026.
+
+**Decision.** Rehearsing prepared answers and delivery practice come first, and the live mock interviewer waits for a second spec. The first two share one request and response loop, while the interviewer needs streaming voice in both directions.
+
 | | |
 |---|---|
 | **What it is** | A native iPhone app for practising interview answers out loud. Design and plans only so far |
